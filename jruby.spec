@@ -1,7 +1,3 @@
-%global _enable_debug_package 0
-%global debug_package %{nil}
-%global __os_install_post /usr/lib/rpm/brp-compress %{nil}
-
 Name:           jruby
 Summary:        Pure-Java Implementation of the Ruby Programming Language
 Version:        9.1.12.0
@@ -24,7 +20,6 @@ Conflicts:      rubygem-jruby
 %setup -q
 
 %install
-export DONT_STRIP=1
 rm -rf $RPM_BUILD_ROOT
 
 %{__mkdir} -p $RPM_BUILD_ROOT%{_datadir}/jruby
